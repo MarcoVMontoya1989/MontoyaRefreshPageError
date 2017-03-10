@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-12">
+    <a class="btn btn-success">New Recipe</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <!-- for Input [variable external component] = "variable local component" -->
+      <!--<rb-recipe-item [recipeItem]="recipeList" (click)="OnSelected(recipeList)"></rb-recipe-item> -->
+      <rb-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe" (click)="OnSelected(recipeList)"></rb-recipe-item>
+    </ul>
+  </div>
+</div>
